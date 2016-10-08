@@ -14,6 +14,11 @@
 \def\ecv@nationalitykey{\ecv@utf{Nazionalit\`a}}
 \def\ecv@birthkey{\ecv@utf{Data di nascita}}
 \def\ecv@genderkey{\ecv@utf{Sesso}}
+% Education
+\def\ecv@degreemark{\ecv@utf{Livello nella classificazione nazionale o internazionale (se pertinente):}}
+\def\ecv@thesistitle{\ecv@utf{Discussione tesi dal titolo:}}
+\def\ecv@avgmark{\ecv@utf{Media ponderata:}}
+\def\ecv@completedexams{\ecv@utf{Esami completati:}}
 % Footer
 \def\ecv@pagekey{\ecv@utf{Pagina}}
 \def\ecv@cvofkey{\ecv@utf{Curriculum vitae di}}

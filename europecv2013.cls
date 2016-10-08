@@ -352,6 +352,7 @@
 \newcommand*{\ecvaddress}[1]{\def\ecv@address{#1}}
 \newcommand*{\ecvtelephone}[2][]{\def\ecv@mobile{#2}\def\ecv@telephone{#1}}
 \newcommand*{\ecvemail}[1]{\def\ecv@email{#1}}
+\newcommand*{\ecvskype}[1]{\def\ecv@skype{#1}}
 \newcommand*{\ecvlinkedin}[1]{\def\ecv@linkedin{#1}}
 \newcommand*{\ecvhomepage}[1]{\def\ecv@homepage{#1}}
 \newcommand*{\ecvnationality}[1]{\def\ecv@nationality{#1}}
@@ -380,6 +381,7 @@
 \ecvaddress{}
 \ecvtelephone{}
 \ecvemail{}
+\ecvskype{}
 \ecvlinkedin{}
 \ecvhomepage{}
 \ecvgender{}
@@ -403,6 +405,9 @@ $\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_mobile}\end{array}
 \fi
 \ifx\@empty\ecv@email\else
 $\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_email}\end{array}$\href{mailto:\ecv@email}{\ecv@email}\par\vspace{5pt}
+\fi
+\ifx\@empty\ecv@skype\else
+$\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_im}\end{array}$\textcolor{curious-blue}{Skype }\ecv@skype\par\vspace{5pt}
 \fi
 \ifx\@empty\ecv@homepage\else
 $\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_url}\end{array}$\ecv@homepage\par\vspace{5pt}
@@ -606,11 +611,33 @@ $\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_linkedin}\end{arra
  #6}
 }
 
-\newcommand{\ecveducation}[6][30pt]{%
+\newcommand{\ecveducation}[8][30pt]{%
  \ecvitem[#1]{#2}{\begin{Large}\textcolor{torea-bay}{#3}\end{Large}
  \hfill\small\textcolor{curious-blue}{#6}\par\vspace{3pt}
  #4{\par\vspace{3pt}}
- #5}
+ #5{\par\vspace{5pt}}
+ \small\textcolor{curious-blue}{\ecv@degreemark} #7 {\par\vspace{3pt}}
+ \small\textcolor{curious-blue}{\ecv@thesistitle} #8 
+ }
+}
+
+\newcommand{\ecvstdeducation}[7][30pt]{%
+ \ecvitem[#1]{#2}{\begin{Large}\textcolor{torea-bay}{#3}\end{Large}
+ \hfill\small\textcolor{curious-blue}{#6}\par\vspace{3pt}
+ #4{\par\vspace{3pt}}
+ #5{\par\vspace{5pt}}
+ \small\textcolor{curious-blue}{\ecv@degreemark} #7
+ }
+}
+
+\newcommand{\ecvcurreducation}[8][30pt]{%
+ \ecvitem[#1]{#2}{\begin{Large}\textcolor{torea-bay}{#3}\end{Large}
+ \hfill\small\textcolor{curious-blue}{#6}\par\vspace{3pt}
+ #4{\par\vspace{3pt}}
+ #5{\par\vspace{5pt}}
+ \small\textcolor{curious-blue}{\ecv@avgmark} #7 {\par\vspace{3pt}}
+ \small\textcolor{curious-blue}{\ecv@completedexams} #8 
+ }
 }
           
 \newif\if@ecvitemstar

@@ -10,15 +10,20 @@
 \def\ecv@mobilekey{\ecv@utf{Mobile}}
 \def\ecv@faxkey{\ecv@utf{Fax(es)}}
 \def\ecv@emailkey{\ecv@utf{Email(s)}}
-\def\ecv@nationalitykey{\ecv@utf{Nationality(-ies)}}
+\def\ecv@nationalitykey{\ecv@utf{Nationality}}
 \def\ecv@birthkey{\ecv@utf{Date of birth}}
 \def\ecv@genderkey{\ecv@utf{Gender}}
+% Education
+\def\ecv@degreemark{\ecv@utf{Graduation Mark:}}
+\def\ecv@thesistitle{\ecv@utf{Thesis Title:}}
+\def\ecv@avgmark{\ecv@utf{Average Mark:}}
+\def\ecv@completedexams{\ecv@utf{Completed Exams:}}
 % Footer
 \def\ecv@pagekey{\ecv@utf{Page}}
 \def\ecv@cvofkey{\ecv@utf{Curriculum vit\ae\ of}}
 % Language table
-\def\ecv@mothertonguekey{\ecv@utf{Mother tongue(s)}}
-\def\ecv@otherlanguageskey{\ecv@utf{Other language(s)}}
+\def\ecv@mothertonguekey{\ecv@utf{Mother tongue}}
+\def\ecv@otherlanguageskey{\ecv@utf{Other language}}
 \def\ecv@levelskey{\ecv@utf{Levels}}
 \def\ecv@understandkey{\ecv@utf{Understanding}}
 \def\ecv@speakkey{\ecv@utf{Speaking}}
