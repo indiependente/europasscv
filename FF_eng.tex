@@ -5,18 +5,26 @@
 \usepackage[T1]{fontenc}
 \usepackage{relsize}
 \usepackage{lipsum}
+\usepackage{hyperref}
 
 \newcommand\CPP{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\relsize{-3}{\textbf{++}}}}
 \newcommand{\tra}[1]{``#1''} %virgolette
 
 
+\newenvironment{absolutelynopagebreak}
+{\par\nobreak\vfil\penalty0\vfilneg
+	\vtop\bgroup}
+{\par\xdef\tpd{\the\prevdepth}\egroup
+	\prevdepth=\tpd}
+
 %[Tutti i campi del CV sono facoltativi. Rimuovere i campi vuoti.]
 \ecvname{Francesco Farina}
 
-\ecvaddress{Via Nofilo, 13 - 84080 Pellezzano (SA), Italy}
-\ecvtelephone{+39 380 233 1336}
+\ecvaddress{UK: Flat 5 Onslow Lodge, Riverside Road, Staines-upon-Thames, TW18 2LE, UK \newline \hspace*{16pt}IT: Via Nofilo 13, Pellezzano (SA), Italy}
+\ecvtelephone{UK: +44 07871 579691 \newline \hspace*{16pt}IT: +39 380 233 1336}
+
 \ecvemail{mail.farinafrancesco@gmail.com}
-%\ecvhomepage{\href{Sostituire con url a pagina personale}{Sostituire con url a pagina personale senza http://}}
+\ecvhomepage{\href{Sostituire con url a pagina personale}{indiependente.github.io}}
 %\ecvlinkedin{\href{http://it.linkedin.com/pub/bonaventura-del-monte/85/314/3ab}{it.linkedin.com/pub/bonaventura-del-monte/85/314/3ab}}
 \ecvgender{Male}
 \ecvskype{francesco.991}
@@ -25,7 +33,7 @@
 
 \ecvfootnote{Latest update: \today \\ I authorize the handling of my personal data pursuant to the Personal Data Protection Code Italian Leg. Dec. n. 196/2003.}
 \ecvbeforepicture{\raggedleft}
-\ecvpicture[width=2.5cm]{cv.png}
+\ecvpicture[width=2.5cm]{francescofarina.png}
 \ecvafterpicture{\ecvspace{-20mm}}
 
 \begin{document}
@@ -44,12 +52,15 @@
 
 %\ecvworkexperience{Sostituire con date (da - a)}{Sostituire con il lavoro o posizione ricoperta}{Sostituire con il nome del datore di lavoro}{Sostituire con l'indirizzo del datore di lavoro}{Sostituire con le principali attività e responsabilità}
 
+
 \ecvsection{Education and Training}
 %[Inserire separatamente i corsi frequentati iniziando da quelli più recenti.]
+\ecverasmus[3pt]{Oct 2016 - in progress}{Erasmus+ Internship}{ServiceNow, UK}{Knowledge of the ServiceNow product through System Administration, Scripting, Discovery, Application Creation classes and internal projects in the Training department.}{Dr. Raffaele Manfellotto}
 
-\ecveducation[3pt]{12/2013 - 09/2016}{Master's Degree in Computer Science}{University of Salerno - Department of Computer Science}{Specialization in computer networks, parallel and concurrent computing, grid and cloud computing, distributed systems, data analysis, data integration, computational and artificial intelligence, security and cryptography, compilers, virtualization, advanced algorithms, social networks structure and robotics.}{EQF Level 7}{110/110 cum Laude}{\tra{A more efficient implementation of the subgraphs-world for the Glauber Dynamics in the Ising Model}, supervisor: Prof. V. Auletta}
+
+\ecveducation[3pt]{Dec 2013 - Sept 2016}{Master's Degree in Computer Science}{University of Salerno - Department of Computer Science}{Specialization in computer networks, parallel and concurrent computing, grid and cloud computing, distributed systems, data analysis, data integration, computational and artificial intelligence, security and cryptography, compilers, virtualization, advanced algorithms, social networks structure and robotics.}{EQF Level 7}{110/110 cum Laude}{\tra{A more efficient implementation of the subgraphs-world for the Glauber Dynamics in the Ising Model}, supervisor: Prof. V. Auletta}
 \\
-\ecveducation[3pt]{09/2010 – 12/2013}{Bachelor’s Degree in Computer Science}{University of Salerno - Department of Computer Science}{Programming languages, operating systems, algorithms, data structures, computer networks, software engineering, parallel and distributed programming, web development and database design.}{EQF Level 6}{110/110 cum Laude}{\tra{Aided-Design of agent-based simulations: the architecture of Agent Modeling Platform}, supervisor: Prof. V. Scarano}
+\ecveducation[3pt]{Sept 2010 – Dec 2013}{Bachelor’s Degree in Computer Science}{University of Salerno - Department of Computer Science}{Programming languages, operating systems, algorithms, data structures, computer networks, software engineering, parallel and distributed programming, web development and database design.}{EQF Level 6}{110/110 cum Laude}{\tra{Aided-Design of agent-based simulations: the architecture of Agent Modeling Platform}, supervisor: Prof. V. Scarano}
 \\
 %\ecvstdeducation[3pt]{09/2005 – 07/2010}{Diploma di Perito Tecnico Informatico}{Istituto Tecnico Industriale Statale \tra{Basilio Focaccia} (SA)}{Materie: informatica, sistemi, elettronica, calcolo statistico, matematica, inglese.}{V Livello QEQ}{95/100}
 
@@ -70,6 +81,8 @@ I have good communication skills gained by partecipating in team made up by many
 \ecvitem[3pt]{Organisational / Managerial skills}
 {I worked in team made of 2 up to 8 people for academical projects, holding managerial position. I have good job scheduling and problem solving competence, even when time is a critical factor.}
 
+
+
 \ecvitem[3pt]{Professional skills}
 {Thanks to the experience acquired in the last years, I have great problem solving skills, from a computer science related point of view. I can quickly analyze problems and pinpoint the methodologies needed for solving them, in order to provide the best feasible solution in the given schedule. I am a fast learner, therefore I can quickly learn new technologies and methodologies.}
 
@@ -82,33 +95,33 @@ I have good communication skills gained by partecipating in team made up by many
 {\par\vspace{3pt}
 During my secondary school I obtained two english language certification: Trinity ISE 1 (B1 level in CEFR) and Trinity Grade 7 (B2 level in CEFR).}
 }
-
-
-
 \ecvsection{Additional Information}
-
+\ecvitem[10pt]{ServiceNow projects}{
+	\begin{itemize}
+		\item[\color{curious-blue}\tiny$\blacksquare$] I have worked on two applications for the training department coordinators integrating the Google Maps and Timezone API using UI Page, developing a tree-relationship structure for Location table, ACL design and lab test results data integration between students' and instructor's instances.   
+	\end{itemize}
+}
 \ecvitem[5pt]{Main Academic Projects}{
-{
 \begin{itemize}
+	\setlength\itemsep{1pt}
 	\item[\color{curious-blue}\tiny$\blacksquare$] Master Thesis subject: computing the Gibbs measure of the subgraphs-world dynamics for the Ising model on real world big datasets.
-	\item[\color{curious-blue}\tiny$\blacksquare$] I developed a tool in collaboration with a colleague and a research assistant. The tool is written in Python and is able of determining the driver condition/performance, by computing the Arousal level through a driver hypo-vigilance.
-	\item[\color{curious-blue}\tiny$\blacksquare$] I realized for the class of “Networks security” a survey with three colleagues about Smart Grids and their security.
-	\item[\color{curious-blue}\tiny$\blacksquare$] For the class “Structures of the social networks”, I implemented and applied centrality measures and one diffusion model to a real sample, in order to evaluate the influence of the most important nodes.
-	\item[\color{curious-blue}\tiny$\blacksquare$] During the class of “Robotics”, together with two colleagues, I builded a vehicle controlled by gesture using as controller the Intel Galileo board and C++ as programming language.
-	\item[\color{curious-blue}\tiny$\blacksquare$] Along with three other colleagues for the class “Data integration on web”, I developed a web application for viewing all the details related to the National Basket Association, by gathering from several websites and integrating them through Node.js, Express and Angular.js.
-	\item[\color{curious-blue}\tiny$\blacksquare$] During the class “Programming languages and compilers”, I developed compiler for the didactic language COOL, exactly the modules for the lexical, syntactic and semantic analysis, along with several colleguaes.
-	\item[\color{curious-blue}\tiny$\blacksquare$] I realized a scalable application, together with other five colleagues for the class “Advanced operating system”, based on MapReduce paradigm and the framework Apache
-	Hadoop2, for the sequences alignment of genomics and proteomics. Also with some of them, I configured and handled the Hadoop cluster consisting of forty computers.
-	\item[\color{curious-blue}\tiny$\blacksquare$] For the class “Computer networks II” together with other two colleagues, I contributed to a Firefox extention called NoTrace by developing a graphic visualization of lost information while browsing, through the libraries Sigma.js and Twitter Bootstrap.
-	\item[\color{curious-blue}\tiny$\blacksquare$] For my bachelor’s degree thesis with another graduating colleague, I realized the integration
-	of the library MASON in the Agent Modeling Platform, which is a visual design system for agent-based simulations with automated generation of Java code, based on Eclipse and its plug-in. The entire project is realized in Java, Xpand, Xtend, EMF and PDT.
-	\item[\color{curious-blue}\tiny$\blacksquare$] I developed a web application focused on the books sharing, along with two colleagues for the class "Software engineering". Such application is designed using PHP, MySQL, HTML5, CSS3 and Javascript.
-	\item[\color{curious-blue}\tiny$\blacksquare$] In the last year, I studied the Node.js platform and its most relevant modules. I created and published five modules on npmjs.org. The development was versioned by git, hosting the code on GitHub. The publication implied the understanding of open source various kind of licences and the Node.js modules deploy mechanism.
+	\item[\color{curious-blue}\tiny$\blacksquare$] I developed a Python tool, with a colleague and a research assistant, able to output a car driver's condition, by computing the Arousal level using a hypo-vigilance driver.
+	\item[\color{curious-blue}\tiny$\blacksquare$] I wrote a survey for the class of “Networks security” about Smart Grids and their security.
+	\item[\color{curious-blue}\tiny$\blacksquare$] For the class “Structures of the social networks”, I implemented and applied centrality measures and one diffusion model to a real-world sample, in order to evaluate the influence of the most important nodes.
+	\item[\color{curious-blue}\tiny$\blacksquare$] During the class of “Robotics”, together with two colleagues, I built a gesture controlled vehicle using the Intel Galileo board as controller and the C++ language.
+	\item[\color{curious-blue}\tiny$\blacksquare$] In a three member team, for the class “Data integration on web”, I developed an NBA players and teams data statistics web application, by gathering and integrating them from several websites using Node.js, Express and Angular.js.
+	\item[\color{curious-blue}\tiny$\blacksquare$] During the class “Programming languages and compilers”, in a team, I developed the lexical, syntactic and semantic analysis modules for a compiler for the didactic language COOL.
+	\item[\color{curious-blue}\tiny$\blacksquare$] I developed a scalable application, in a six members team, for the class “Advanced operating system”, based on MapReduce paradigm and the framework Apache Hadoop2, for the sequence alignment of genomics and proteomics. Also with some of them, I configured and maintained the forty nodes Hadoop cluster .
+	\item[\color{curious-blue}\tiny$\blacksquare$] For the class “Computer networks II”, in a three members team, I contributed to a Firefox extension called NoTrace by developing a graphic visualization of lost information while browsing, using the libraries Sigma.js and Twitter Bootstrap.
+	\item[\color{curious-blue}\tiny$\blacksquare$] Bachelor Thesis subject: I integrated, with another graduating colleague, the MASON library in a visual design system for agent-based simulations called Agent Modeling Platform, with automated generation of Java code, based on Eclipse, Java, Xpand, Xtend, EMF and PDT.
+%	\item[\color{curious-blue}\tiny$\blacksquare$] I developed a web application focused on the books sharing, along with two colleagues for the class "Software engineering". Such application is designed using PHP, MySQL, HTML5, CSS3 and Javascript.
+	\item[\color{curious-blue}\tiny$\blacksquare$] In the last year, I studied the Node.js platform and its most relevant modules. I published five modules on \url{http://npmjs.org}. The development was versioned by git, hosting the code on GitHub. I studied the open source licenses and learned its deploy process.
 \end{itemize}
 }
-}
 
-\ecvitem[3pt]{Legal}{I authorize the handling of my personal data pursuant to the Personal Data Protection Code Italian Leg. Dec. n. 196/2003.}
+
+
+%\ecvitem[3pt]{Legal}{I authorize the handling of my personal data pursuant to the Personal Data Protection Code Italian Leg. Dec. n. 196/2003.}
 
 
 

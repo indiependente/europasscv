@@ -621,6 +621,15 @@ $\begin{array}{@{}l}\includegraphics[width=\ecv@iconwidth]{ic_linkedin}\end{arra
  }
 }
 
+
+\newcommand{\ecverasmus}[8][30pt]{%
+ \ecvitem[#1]{#2}{\begin{Large}\textcolor{torea-bay}{#3}\end{Large}{\par\vspace{3pt}}
+ \small{#4}{\par\vspace{3pt}}
+ #5{\par\vspace{3pt}}
+ \small\textcolor{curious-blue}{\ecv@supervisor}#6}
+}
+
+
 \newcommand{\ecvstdeducation}[7][30pt]{%
  \ecvitem[#1]{#2}{\begin{Large}\textcolor{torea-bay}{#3}\end{Large}
  \hfill\small\textcolor{curious-blue}{#6}\par\vspace{3pt}
